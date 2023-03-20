@@ -18,7 +18,7 @@ COMP = gcc
 #COMP = clang++
 
 #### Choose Compiler version
-COMP += -std=c11
+#COMP += -std=c11
 #COMP += -std=c++17
 ######################################################
 
