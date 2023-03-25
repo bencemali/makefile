@@ -25,10 +25,19 @@ COMP = gcc
 
 #### 4. Compiler Options #############################
 #### Compiler flags
-COMPFLAGS = -Wall -pedantic -Wextra -Werror -g -O0 -I. -I$(HEADDIR)
+COMPFLAGS = -I. -I$(HEADDIR)
+#COMPFLAGS += -Wall
+#COMPFLAGS += -Wextra
+#COMPFLAGS += -Werror
+#COMPFLAGS += -g
+#COMPFLAGS += -O0
+#COMPFLAGS += -I.
+#COMPFLAGS += -pedantic
 
 #### Linker flags
 LDFLAGS =
+#LDFLAGS += -lm
+#LDFLAGS += -static
 ######################################################
 
 
