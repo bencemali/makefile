@@ -8,42 +8,73 @@ LANG = C
 #LANG = CPP
 ######################################################
 
+
 #### 3. Choose Compiler + Version ####################
 #### C compilers
-COMP = gcc
-#COMP = clang
+COMP = gcc          # GNU C Compiler
+#COMP = clang       # Clang C Compiler
+#COMP = icc         # Intel C Compiler
+#COMP = tcc         # Tiny C Compiler
 
 #### C++ compilers
-#COMP = g++
-#COMP = clang++
+#COMP = g++         # GNU C++ Compiler
+#COMP = clang++     # Clang C++ Compiler
+#COMP = icpc        # Intel C++ Compiler
+#COMP = t++         # Tiny C++ Compiler
 
 #### Choose Compiler version
-#COMP += -std=c11
-#COMP += -std=c++17
+#COMP += -std=c99       # C99
+#COMP += -std=c11       # C11
+#COMP += -std=c17       # C17
+#COMP += -std=c18       # C18
+#COMP += -std=c2x       # C2x
+
+#COMP += -std=c++98     # C++98
+#COMP += -std=c++03     # C++03
+#COMP += -std=c++14     # C++14
+#COMP += -std=c++17     # C++17
+#COMP += -std=c++2a     # C++2a
 ######################################################
 
 
-#### 4. Compiler Options #############################
+#### 4. Compiler/Linker Options #############################
 #### Compiler flags
-COMPFLAGS = -I. -I$(HEADDIR)
-#COMPFLAGS += -Wall
-#COMPFLAGS += -Wextra
-#COMPFLAGS += -Werror
-#COMPFLAGS += -g
-#COMPFLAGS += -O0
-#COMPFLAGS += -I.
-#COMPFLAGS += -pedantic
+COMPFLAGS = -I.                     # include current directory
+COMPFLAGS += -I$(HEADDIR)           # include header directory
+COMPFLAGS += -Wall                  # enable all warnings
+COMPFLAGS += -Wextra                # enable extra warnings
+COMPFLAGS += -Werror                # treat warnings as errors
+COMPFLAGS += -g                     # enable debug symbols
+COMPFLAGS += -O0                    # no optimization
+#COMPFLAGS += -O1                   # optimize
+#COMPFLAGS += -O2                   # optimize more
+#COMPFLAGS += -O3                   # do not use
+COMPFLAGS += -I.                    # include current directory
+COMPFLAGS += -pedantic              # enable pedantic warnings
+#COMPFLAGS += -fstack-protector     # enable stack protection
+#COMPFLAGS += -fsanitize            # enable all sanitizers
+#COMPFLAGS += -march=native         # enable native architecture optimizations
+#COMPFLAGS += -mtune=native         # enable native cpu optimizations
 
 #### Linker flags
 LDFLAGS =
-#LDFLAGS += -lm
-#LDFLAGS += -static
+#LDFLAGS += -L/path/to/lib          # link library directory
+#LDFLAGS += -lm                     # link math library
+#LDFLAGS += -static                 # link statically
+#LDFLAGS += -static-libgcc          # link libgcc statically
+#LDFLAGS += -static-libstdc++       # link libstdc++ statically
+#LDFLAGS += -pthread                # link pthread library
+#LDFLAGS += -nostdlib               # do not link standard libraries
+#LDFLAGS += -nolibc                 # do not link libc
+#LDFLAGS += -nostartfiles           # do not link start files
+#LDFLAGS += -nodefaultlibs          # do not link default libraries
+#LDFLAGS += -lSDL2                  # link SDL2 library
 ######################################################
 
 
 #### 5. Name your directories ########################
 HEADDIR = include
-SRCDIR = src
+SRCDIR = src						
 OBJDIR = obj
 BINDIR = bin
 ######################################################
@@ -99,4 +130,3 @@ memtest: $(TARGET)
 
 echo:
 	@echo $(foreach var, $(.VARIABLES), $(info $(var) = $($(var)))) # | grep "... ="
-
