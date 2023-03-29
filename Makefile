@@ -69,6 +69,13 @@ LDFLAGS =
 #LDFLAGS += -nostartfiles           # do not link start files
 #LDFLAGS += -nodefaultlibs          # do not link default libraries
 #LDFLAGS += -lSDL2                  # link SDL2 library
+#LDFLAGS += -lGL					# link OpenGL library
+#LDFLAGS += -lGLEW					# link GLEW library
+#LDFLAGS += -L/usr/X11R6/lib        # link X11 library
+#LDFLAGS += -lglut				    # link GLUT library
+#LDFLAGS += -lGLU                   # link GLU library
+#LDFLAGS += -lXi					# link Xi library
+#LDFLAGS += -lXmu					# link Xmu library
 ######################################################
 
 
