@@ -29,11 +29,11 @@ COMP = gcc
 #COMP += -std=c18
 #COMP += -std=c2x
 
-#COMP += -std=c++98     # C++98
-#COMP += -std=c++03     # C++03
-#COMP += -std=c++14     # C++14
-#COMP += -std=c++17     # C++17
-#COMP += -std=c++2a     # C++2a
+#COMP += -std=c++98
+#COMP += -std=c++03
+#COMP += -std=c++14
+#COMP += -std=c++17
+#COMP += -std=c++2a
 ######################################################
 
 
