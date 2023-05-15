@@ -39,76 +39,76 @@ COMP = gcc
 
 #### 4. Compiler/Linker Options #############################
 #### Compiler flags
-	# include current directory
+# include current directory
 COMPFLAGS = -I.
-	# include header directory
+# include header directory
 COMPFLAGS += -I$(HEADDIR)
-	# enable all warnings
+# enable all warnings
 COMPFLAGS += -Wall
-	# enable extra warnings
+# enable extra warnings
 COMPFLAGS += -Wextra
-	# treat warnings as errors
+# treat warnings as errors
 COMPFLAGS += -Werror
-	# enable debug symbols
+# enable debug symbols
 COMPFLAGS += -g
-	# no optimization
+# no optimization
 COMPFLAGS += -O0
-	# optimize
+# optimize
 #COMPFLAGS += -O1
-	# optimize more
+# optimize more
 #COMPFLAGS += -O2
-	# do not use
+# do not use
 #COMPFLAGS += -O3
-	# include current directory
+# include current directory
 COMPFLAGS += -I.
-	# enable pedantic warnings
+# enable pedantic warnings
 COMPFLAGS += -pedantic
-	# enable stack protection
+# enable stack protection
 #COMPFLAGS += -fstack-protector
-	# enable all sanitizers
+# enable all sanitizers
 #COMPFLAGS += -fsanitize
-	# enable native architecture optimizations
+# enable native architecture optimizations
 #COMPFLAGS += -march=native
-	# enable native cpu optimizations
+# enable native cpu optimizations
 #COMPFLAGS += -mtune=native
 
 #### Linker flags
 LDFLAGS =
-	# link library directory
+# link library directory
 #LDFLAGS += -L/path/to/lib
-	# link math library
+# link math library
 #LDFLAGS += -lm
-	# link statically
+# link statically
 #LDFLAGS += -static
-	# link libgcc statically
+# link libgcc statically
 #LDFLAGS += -static-libgcc
-	# link libstdc++ statically
+# link libstdc++ statically
 #LDFLAGS += -static-libstdc++
-	# link pthread library
+# link pthread library
 #LDFLAGS += -pthread
-	# do not link standard libraries
+# do not link standard libraries
 #LDFLAGS += -nostdlib
-	# do not link libc
+# do not link libc
 #LDFLAGS += -nolibc
-	# do not link start files
+# do not link start files
 #LDFLAGS += -nostartfiles
-	# do not link default libraries
+# do not link default libraries
 #LDFLAGS += -nodefaultlibs
-	# link SDL2 library
+# link SDL2 library
 #LDFLAGS += -lSDL2
-	# link OpenGL library
+# link OpenGL library
 #LDFLAGS += -lGL
-	# link GLEW library
+# link GLEW library
 #LDFLAGS += -lGLEW
-	# link X11 library
+# link X11 library
 #LDFLAGS += -L/usr/X11R6/lib
-	# link GLUT library
+# link GLUT library
 #LDFLAGS += -lglut
-	# link GLU library
+# link GLU library
 #LDFLAGS += -lGLU
-	# link Xi library
+# link Xi library
 #LDFLAGS += -lXi
-	# link Xmu library
+# link Xmu library
 #LDFLAGS += -lXmu
 ######################################################
 
