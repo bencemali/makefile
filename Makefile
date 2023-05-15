@@ -11,23 +11,23 @@ LANG = C
 
 #### 3. Choose Compiler + Version ####################
 #### C compilers
-COMP = gcc          # GNU C Compiler
-#COMP = clang       # Clang C Compiler
-#COMP = icc         # Intel C Compiler
-#COMP = tcc         # Tiny C Compiler
+COMP = gcc
+#COMP = clang
+#COMP = icc
+#COMP = tcc
 
 #### C++ compilers
-#COMP = g++         # GNU C++ Compiler
-#COMP = clang++     # Clang C++ Compiler
-#COMP = icpc        # Intel C++ Compiler
-#COMP = t++         # Tiny C++ Compiler
+#COMP = g++
+#COMP = clang++
+#COMP = icpc
+#COMP = t++
 
 #### Choose Compiler version
-#COMP += -std=c99       # C99
-#COMP += -std=c11       # C11
-#COMP += -std=c17       # C17
-#COMP += -std=c18       # C18
-#COMP += -std=c2x       # C2x
+#COMP += -std=c99
+#COMP += -std=c11
+#COMP += -std=c17
+#COMP += -std=c18
+#COMP += -std=c2x
 
 #COMP += -std=c++98     # C++98
 #COMP += -std=c++03     # C++03
@@ -39,43 +39,77 @@ COMP = gcc          # GNU C Compiler
 
 #### 4. Compiler/Linker Options #############################
 #### Compiler flags
-COMPFLAGS = -I.                     # include current directory
-COMPFLAGS += -I$(HEADDIR)           # include header directory
-COMPFLAGS += -Wall                  # enable all warnings
-COMPFLAGS += -Wextra                # enable extra warnings
-COMPFLAGS += -Werror                # treat warnings as errors
-COMPFLAGS += -g                     # enable debug symbols
-COMPFLAGS += -O0                    # no optimization
-#COMPFLAGS += -O1                   # optimize
-#COMPFLAGS += -O2                   # optimize more
-#COMPFLAGS += -O3                   # do not use
-COMPFLAGS += -I.                    # include current directory
-COMPFLAGS += -pedantic              # enable pedantic warnings
-#COMPFLAGS += -fstack-protector     # enable stack protection
-#COMPFLAGS += -fsanitize            # enable all sanitizers
-#COMPFLAGS += -march=native         # enable native architecture optimizations
-#COMPFLAGS += -mtune=native         # enable native cpu optimizations
+	# include current directory
+COMPFLAGS = -I.
+	# include header directory
+COMPFLAGS += -I$(HEADDIR)
+	# enable all warnings
+COMPFLAGS += -Wall
+	# enable extra warnings
+COMPFLAGS += -Wextra
+	# treat warnings as errors
+COMPFLAGS += -Werror
+	# enable debug symbols
+COMPFLAGS += -g
+	# no optimization
+COMPFLAGS += -O0
+	# optimize
+#COMPFLAGS += -O1
+	# optimize more
+#COMPFLAGS += -O2
+	# do not use
+#COMPFLAGS += -O3
+	# include current directory
+COMPFLAGS += -I.
+	# enable pedantic warnings
+COMPFLAGS += -pedantic
+	# enable stack protection
+#COMPFLAGS += -fstack-protector
+	# enable all sanitizers
+#COMPFLAGS += -fsanitize
+	# enable native architecture optimizations
+#COMPFLAGS += -march=native
+	# enable native cpu optimizations
+#COMPFLAGS += -mtune=native
 
 #### Linker flags
 LDFLAGS =
-#LDFLAGS += -L/path/to/lib          # link library directory
-#LDFLAGS += -lm                     # link math library
-#LDFLAGS += -static                 # link statically
-#LDFLAGS += -static-libgcc          # link libgcc statically
-#LDFLAGS += -static-libstdc++       # link libstdc++ statically
-#LDFLAGS += -pthread                # link pthread library
-#LDFLAGS += -nostdlib               # do not link standard libraries
-#LDFLAGS += -nolibc                 # do not link libc
-#LDFLAGS += -nostartfiles           # do not link start files
-#LDFLAGS += -nodefaultlibs          # do not link default libraries
-#LDFLAGS += -lSDL2                  # link SDL2 library
-#LDFLAGS += -lGL					# link OpenGL library
-#LDFLAGS += -lGLEW					# link GLEW library
-#LDFLAGS += -L/usr/X11R6/lib        # link X11 library
-#LDFLAGS += -lglut				    # link GLUT library
-#LDFLAGS += -lGLU                   # link GLU library
-#LDFLAGS += -lXi					# link Xi library
-#LDFLAGS += -lXmu					# link Xmu library
+	# link library directory
+#LDFLAGS += -L/path/to/lib
+	# link math library
+#LDFLAGS += -lm
+	# link statically
+#LDFLAGS += -static
+	# link libgcc statically
+#LDFLAGS += -static-libgcc
+	# link libstdc++ statically
+#LDFLAGS += -static-libstdc++
+	# link pthread library
+#LDFLAGS += -pthread
+	# do not link standard libraries
+#LDFLAGS += -nostdlib
+	# do not link libc
+#LDFLAGS += -nolibc
+	# do not link start files
+#LDFLAGS += -nostartfiles
+	# do not link default libraries
+#LDFLAGS += -nodefaultlibs
+	# link SDL2 library
+#LDFLAGS += -lSDL2
+	# link OpenGL library
+#LDFLAGS += -lGL
+	# link GLEW library
+#LDFLAGS += -lGLEW
+	# link X11 library
+#LDFLAGS += -L/usr/X11R6/lib
+	# link GLUT library
+#LDFLAGS += -lglut
+	# link GLU library
+#LDFLAGS += -lGLU
+	# link Xi library
+#LDFLAGS += -lXi
+	# link Xmu library
+#LDFLAGS += -lXmu
 ######################################################
 
 
