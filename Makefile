@@ -115,7 +115,7 @@ LDFLAGS =
 
 #### 5. Name your directories ########################
 HEADDIR = include
-SRCDIR = src						
+SRCDIR = src
 OBJDIR = obj
 BINDIR = bin
 ######################################################
