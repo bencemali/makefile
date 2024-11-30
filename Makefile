@@ -68,9 +68,6 @@ COMPFLAGS += -pedantic
 # enable all sanitizers
 #COMPFLAGS += -fsanitize
 # enable native architecture optimizations
-#COMPFLAGS += -march=native
-# enable native cpu optimizations
-#COMPFLAGS += -mtune=native
 
 #### Linker flags
 LDFLAGS =
@@ -91,25 +88,6 @@ LDFLAGS =
 # do not link libc
 #LDFLAGS += -nolibc
 # do not link start files
-#LDFLAGS += -nostartfiles
-# do not link default libraries
-#LDFLAGS += -nodefaultlibs
-# link SDL2 library
-#LDFLAGS += -lSDL2
-# link OpenGL library
-#LDFLAGS += -lGL
-# link GLEW library
-#LDFLAGS += -lGLEW
-# link X11 library
-#LDFLAGS += -L/usr/X11R6/lib
-# link GLUT library
-#LDFLAGS += -lglut
-# link GLU library
-#LDFLAGS += -lGLU
-# link Xi library
-#LDFLAGS += -lXi
-# link Xmu library
-#LDFLAGS += -lXmu
 ######################################################
 
 
